@@ -18,7 +18,7 @@ include 'db.php';
 if(session_id() == ''){
     session_start();
 }
-$query = "SELECT * FROM guestbook WHERE  no=" . $_GET['no']; //選出該位使用者所留下的所有留言
+$query = "SELECT * FROM guestbook WHERE  no=" . $_GET['no'];
 $result = mysqli_query($db, $query);
 $no = $_GET['no'];
 while ($rs = mysqli_fetch_array($result)) {
@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
 
 	$no = $_POST['no'];
 	$name = $_POST['name'];
+	var_dump($_POST['name']);
 	$subject = $_POST['subject'];
 	$content = $_POST['content'];
 

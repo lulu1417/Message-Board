@@ -32,7 +32,7 @@ $name = $_GET['name'];
         $_SESSION['no'] =  $row['no'];
         if ($name == $row['name']) {
             echo '
-		<a href=" edit.php?no=' . $row['no'] .'">
+		<a href=" edit.php?name=' . $name . '&no=' . $row['no'] .'">
 		Edit message content</a>&nbsp|&nbsp<a href="delete.php">Delete the message</a><br>';
         }
         echo "Time：" . $row['time'] . "<br>";
